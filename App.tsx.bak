@@ -1,0 +1,129 @@
+import { ChevronLeft } from "lucide-react";
+import React, { useCallback, useState } from "react";
+import MainPlatform from "./components/MainPlatform";
+import {
+  AvatarCreationScreen,
+  CurrenciesScreen,
+  DailyActionsScreen,
+  FinishScreen,
+  ProgressionScreen,
+  ShopPreviewScreen,
+  SocialScreen,
+  WelcomeScreen,
+} from "./components/OnboardingScreens";
+
+const TOTAL_STEPS = 8;
+
+const App: React.FC = () => {
+  const [appState, setAppState] = useState<"onboarding" | "main">("onboarding");
+  const [step, setStep] = useState(1);
+  const [petName, setPetName] = useState("");
+  const [selectedAvatar] = useState(
+    "https://ik.imagekit.io/erriqyxye/Ipay%20RFP/ChatGPT%20Image%20Aug%2026,%202025,%2005_01_45%20AM.png?updatedAt=1756161114127"
+  );
+
+  const nextStep = useCallback(() => {
+    setStep((prev) => (prev < TOTAL_STEPS ? prev + 1 : prev));
+  }, []);
+
+  const prevStep = useCallback(() => {
+    setStep((prev) => (prev > 1 ? prev - 1 : prev));
+  }, []);
+
+  const restartOnboarding = useCallback(() => {
+    setPetName("");
+    setStep(1);
+    setAppState("onboarding");
+  }, []);
+
+  const completeOnboarding = useCallback(() => {
+    if (petName.trim() === "") {
+      // Assign a default name if user skipped to the end and didn't set one
+      setPetName("Kai");
+    }
+    setAppState("main");
+  }, [petName]);
+
+  const renderOnboardingStep = () => {
+    switch (step) {
+      case 1:
+        return <WelcomeScreen onNext={nextStep} />;
+      case 2:
+        return (
+          <AvatarCreationScreen
+            onNext={nextStep}
+            petName={petName}
+            setPetName={setPetName}
+          />
+        );
+      case 3:
+        return <CurrenciesScreen onNext={nextStep} />;
+      case 4:
+        return <DailyActionsScreen onNext={nextStep} />;
+      case 5:
+        return <ProgressionScreen onNext={nextStep} />;
+      case 6:
+        return <SocialScreen onNext={nextStep} />;
+      case 7:
+        return <ShopPreviewScreen onNext={nextStep} />;
+      case 8:
+        return (
+          <FinishScreen
+            onClaim={completeOnboarding}
+            onRestart={restartOnboarding}
+            petName={petName}
+          />
+        );
+      default:
+        return <WelcomeScreen onNext={nextStep} />;
+    }
+  };
+
+  return (
+    <div className="w-[390px] h-[844px] bg-background  overflow-hidden flex flex-col  border-text-primary">
+      {appState === "main" ? (
+        <MainPlatform petName={petName} selectedAvatar={selectedAvatar} />
+      ) : (
+        <>
+          {/* Progress Bar */}
+          <div className="w-full bg-gray-300 h-2.5">
+            <div
+              className="bg-primary h-2.5 rounded-r-full transition-all duration-500 ease-out"
+              style={{ width: `${(step / TOTAL_STEPS) * 100}%` }}
+            ></div>
+          </div>
+
+          <div className="flex-grow p-6 flex flex-col">
+            {renderOnboardingStep()}
+          </div>
+
+          {step > 1 && (
+            <div className="absolute top-4 left-6 z-10">
+              <button
+                onClick={prevStep}
+                className="text-text-secondary hover:text-text-primary transition-colors text-sm font-semibold flex items-center"
+                aria-label="Go back"
+              >
+                <ChevronLeft className="w-5 h-5" />
+                <span>Back</span>
+              </button>
+            </div>
+          )}
+
+          {step < TOTAL_STEPS && (
+            <div className="absolute top-4 right-4 z-10">
+              <button
+                onClick={() => setStep(TOTAL_STEPS)}
+                className="text-text-secondary hover:text-text-primary transition-colors text-sm font-semibold"
+              >
+                Skip
+              </button>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+
+export default App;

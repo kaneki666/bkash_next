@@ -1,0 +1,110 @@
+{
+  "results": {
+    "App.tsx": [
+      "useState",
+      "useCallback"
+    ],
+    "pages/Leaderboard.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/TreasurePage.tsx": [
+      "useState",
+      "useMemo"
+    ],
+    "pages/ReferralPage.tsx": [
+      "useState"
+    ],
+    "pages/HallOfFame.tsx": [
+      "useState"
+    ],
+    "pages/RewardMap.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/Achievements.tsx": [
+      "useState"
+    ],
+    "pages/Events.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/Shop.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/QuestHub.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/DailySpinGame.tsx": [
+      "useState"
+    ],
+    "pages/Profile.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/Championship.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/Avatar.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/TeamUpChallenge.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/SummerFestival.tsx": [
+      "useState",
+      "useEffect"
+    ],
+    "pages/Play.tsx": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ],
+    "pages/StarterJourney.tsx": [
+      "useState"
+    ],
+    "components/MainPlatform.tsx": [
+      "useState",
+      "useEffect",
+      "useRef",
+      "useCallback"
+    ],
+    "components/OnboardingScreens.tsx": [
+      "useState",
+      "useEffect",
+      "useCallback"
+    ]
+  },
+  "summary": {
+    "total_files_scanned": 90,
+    "files_with_hooks": 20,
+    "sample_files": [
+      "App.tsx",
+      "pages/Leaderboard.tsx",
+      "pages/TreasurePage.tsx",
+      "pages/ReferralPage.tsx",
+      "pages/HallOfFame.tsx",
+      "pages/RewardMap.tsx",
+      "pages/Achievements.tsx",
+      "pages/Events.tsx",
+      "pages/Shop.tsx",
+      "pages/QuestHub.tsx",
+      "pages/DailySpinGame.tsx",
+      "pages/Profile.tsx",
+      "pages/Championship.tsx",
+      "pages/Avatar.tsx",
+      "pages/TeamUpChallenge.tsx",
+      "pages/SummerFestival.tsx",
+      "pages/Play.tsx",
+      "pages/StarterJourney.tsx",
+      "components/MainPlatform.tsx",
+      "components/OnboardingScreens.tsx"
+    ]
+  }
+}

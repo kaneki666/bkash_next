@@ -1,0 +1,202 @@
+{
+  "App.tsx": [
+    [
+      2,
+      "import React, { useCallback, useState } from \"react\";"
+    ],
+    [
+      18,
+      "const [appState, setAppState] = useState<\"onboarding\" | \"main\">(\"onboarding\");"
+    ],
+    [
+      19,
+      "const [step, setStep] = useState(1);"
+    ],
+    [
+      20,
+      "const [petName, setPetName] = useState(\"\");"
+    ],
+    [
+      21,
+      "const [selectedAvatar] = useState("
+    ],
+    [
+      25,
+      "const nextStep = useCallback(() => {"
+    ],
+    [
+      29,
+      "const prevStep = useCallback(() => {"
+    ],
+    [
+      33,
+      "const restartOnboarding = useCallback(() => {"
+    ]
+  ],
+  "pages/Leaderboard.tsx": [
+    [
+      2,
+      "import React, { useState, useEffect } from 'react';"
+    ],
+    [
+      8,
+      "const [timeLeft, setTimeLeft] = useState({ d: 0, h: 0, m: 0, s: 0 });"
+    ],
+    [
+      10,
+      "useEffect(() => {"
+    ]
+  ],
+  "pages/TreasurePage.tsx": [
+    [
+      2,
+      "import React, { useState, useMemo } from 'react';"
+    ],
+    [
+      50,
+      "const prizes: Prize[] = React.useMemo(() => ["
+    ],
+    [
+      63,
+      "const [isSpinning, setIsSpinning] = useState(false);"
+    ],
+    [
+      64,
+      "const [wonPrize, setWonPrize] = useState<Prize | null>(null);"
+    ],
+    [
+      65,
+      "const [currentRotation, setCurrentRotation] = useState(0);"
+    ]
+  ],
+  "pages/ReferralPage.tsx": [
+    [
+      3,
+      "import React, { useState } from 'react';"
+    ],
+    [
+      8,
+      "const [copied, setCopied] = useState(false);"
+    ]
+  ],
+  "pages/HallOfFame.tsx": [
+    [
+      2,
+      "import React, { useState } from 'react';"
+    ],
+    [
+      9,
+      "const [activeTab, setActiveTab] = useState('leaderboard');"
+    ]
+  ],
+  "pages/RewardMap.tsx": [
+    [
+      2,
+      "import React, { useState, useEffect } from 'react';"
+    ],
+    [
+      220,
+      "const [showInfo, setShowInfo] = useState(false);"
+    ],
+    [
+      221,
+      "const [selectedMilestone, setSelectedMilestone] = useState<MilestoneData | null>(null);"
+    ]
+  ],
+  "pages/Achievements.tsx": [
+    [
+      3,
+      "import React, { useState } from 'react';"
+    ],
+    [
+      73,
+      "const [achievementToShare, setAchievementToShare] = useState<any | null>(null);"
+    ]
+  ],
+  "pages/Events.tsx": [
+    [
+      2,
+      "import React, { useState, useEffect } from 'react';"
+    ],
+    [
+      10,
+      "const [timeLeft, setTimeLeft] = useState(targetDate - new Date().getTime());"
+    ],
+    [
+      12,
+      "useEffect(() => {"
+    ],
+    [
+      72,
+      "const [showInfo, setShowInfo] = useState(false);"
+    ],
+    [
+      80,
+      "useEffect(() => {"
+    ]
+  ],
+  "pages/Shop.tsx": [
+    [
+      2,
+      "import React, { useState, useEffect } from 'react';"
+    ],
+    [
+      131,
+      "const [activeTab, setActiveTab] = useState('skins');"
+    ],
+    [
+      132,
+      "const [activeFilter, setActiveFilter] = useState('All');"
+    ],
+    [
+      133,
+      "const [infoModalMessage, setInfoModalMessage] = useState<string | null>(null);"
+    ],
+    [
+      134,
+      "const [showInfo, setShowInfo] = useState(false);"
+    ],
+    [
+      136,
+      "useEffect(() => {"
+    ],
+    [
+      240,
+      "const [pointsToExchange, setPointsToExchange] = useState(0);"
+    ]
+  ],
+  "pages/QuestHub.tsx": [
+    [
+      3,
+      "import React, { useState, useEffect } from 'react';"
+    ],
+    [
+      45,
+      "const [secondsLeft, setSecondsLeft] = useState(initialSeconds);"
+    ],
+    [
+      46,
+      "useEffect(() => {"
+    ],
+    [
+      236,
+      "const [missions, setMissions] = useState(initialMissionsData);"
+    ],
+    [
+      237,
+      "const [showInfo, setShowInfo] = useState(false);"
+    ],
+    [
+      238,
+      "const [showFreePlayModal, setShowFreePlayModal] = useState(false);"
+    ],
+    [
+      239,
+      "const [achievementToShare, setAchievementToShare] = useState<any | null>(null);"
+    ],
+    [
+      240,
+      "const [activeQuestCategory, setActiveQuestCategory] = useState<MissionCategory>(forcedCategory || 'starter');"
+    ]
+  ]
+}
