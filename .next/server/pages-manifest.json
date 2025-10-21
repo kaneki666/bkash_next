@@ -1,1 +1,24 @@
-{}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/Achievements": "pages/Achievements.html",
+  "/ActivityLogPage": "pages/ActivityLogPage.html",
+  "/Championship": "pages/Championship.html",
+  "/DailySpinGame": "pages/DailySpinGame.html",
+  "/Events": "pages/Events.html",
+  "/HallOfFame": "pages/HallOfFame.html",
+  "/Leaderboard": "pages/Leaderboard.html",
+  "/NotificationsPage": "pages/NotificationsPage.html",
+  "/Play": "pages/Play.html",
+  "/QuestHub": "pages/QuestHub.html",
+  "/ReferralPage": "pages/ReferralPage.html",
+  "/RewardMap": "pages/RewardMap.html",
+  "/StarterJourney": "pages/StarterJourney.html",
+  "/SummerFestival": "pages/SummerFestival.html",
+  "/TeamUpChallenge": "pages/TeamUpChallenge.html",
+  "/TreasurePage": "pages/TreasurePage.html",
+  "/Profile": "pages/Profile.html",
+  "/Shop": "pages/Shop.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}

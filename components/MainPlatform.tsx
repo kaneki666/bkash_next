@@ -1,21 +1,25 @@
 import { motion } from "framer-motion";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { ActivityLogPage } from "../pages/ActivityLogPage";
-import { Avatar } from "../pages/Avatar";
-import { Championship } from "../pages/Championship";
-import { DailySpinGame } from "../pages/DailySpinGame";
-import { Events } from "../pages/Events";
-import { HallOfFame } from "../pages/HallOfFame";
-import { Leaderboard } from "../pages/Leaderboard";
-import { NotificationsPage } from "../pages/NotificationsPage";
-import { Profile } from "../pages/Profile";
-import { QuestHub } from "../pages/QuestHub";
-import { ReferralPage } from "../pages/ReferralPage";
-import { RewardMap } from "../pages/RewardMap";
-import { LoyaltyExchangePage, Shop } from "../pages/Shop";
-import { SummerFestival } from "../pages/SummerFestival";
-import { TeamUpChallenge } from "../pages/TeamUpChallenge";
-import { TreasurePage } from "../pages/TreasurePage";
+// ...existing code...
+// Fixed imports: pages export default components — import them as defaults.
+// Also import Shop as default and LoyaltyExchangePage as a named export.
+import Avatar from "../components/Avatar";
+import ActivityLogPage from "../pages/ActivityLogPage";
+import Championship from "../pages/Championship";
+import DailySpinGame from "../pages/DailySpinGame";
+import Events from "../pages/Events";
+import HallOfFame from "../pages/HallOfFame";
+import Leaderboard from "../pages/Leaderboard";
+import NotificationsPage from "../pages/NotificationsPage";
+import Profile from "../pages/Profile";
+import QuestHub from "../pages/QuestHub";
+import ReferralPage from "../pages/ReferralPage";
+import RewardMap from "../pages/RewardMap";
+import Shop, { LoyaltyExchangePage } from "../pages/Shop";
+import SummerFestival from "../pages/SummerFestival";
+import TeamUpChallenge from "../pages/TeamUpChallenge";
+import TreasurePage from "../pages/TreasurePage";
+/*...existing code...*/
 import { MilestoneData, Notification, PetStage } from "../types";
 import BottomNav from "./BottomNav";
 import DailyRewardModal from "./DailyRewardModal";
